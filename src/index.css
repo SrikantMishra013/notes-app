@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +17,153 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
+  display: flex;
+  gap: 1rem;
+}
+
+
+.note-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.note-item {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.note {
+
+  min-width: 250px;
+  background-color: #9400d385;
+  border: 1px solid rgba(0, 0, 0, 0.212);
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.note textarea {
+  width: 100%;
+  height: auto;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 22px;
+  text-transform: capitalize;
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  resize: none;
+  margin-bottom: 10px;
+}
+
+textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: #0ae215;
+  border-radius: 6px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background-color: #ececec;
+  border-radius: 6px;
+}
+
+textarea::placeholder {
+  color: rgba(0, 0, 0, 0.808);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.note-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.note-footer small{
+    font-family: 'Times New Roman';
+    
+}
+
+.delete-note {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.delete-note:active {
+  transform: scale(0.90);
+}
+
+.sidebar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.addBtn{
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.addBtn:active{
+  transform: scale(.95);
+}
+
+.color-list {
+  transition: 0.3s ease;
+}
+.color-list img{
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  user-select: none;
+}
+.color-list:active{
+  transform: scale(0.90);
+}
+
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  height: 0;
+  transition: 0.5s ease;
+}
+
+.sidebar-list-active {
+  height: 300px;
+}
+
+.item {
+  list-style: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+}
+
+.toggle{
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+}
+.toggle img{
+  border-radius: 10px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+
