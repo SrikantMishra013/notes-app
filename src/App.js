@@ -22,7 +22,7 @@ const App = () => {
       title: "",
       color: selectedColor,
       text: "",
-      date: date.toLocaleDateString(),
+      date: date.toLocaleString(),
     });
     setNotes(tempNote);
   }
